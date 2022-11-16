@@ -812,6 +812,11 @@ footer P > a:hover {
     margin-left: 0;
   }
 
+  .overlay .close {
+    top: 165px;
+    left: 195px;
+  }
+
   section.jumbotron {
     height: 1000px;
     overflow-x: visible;
