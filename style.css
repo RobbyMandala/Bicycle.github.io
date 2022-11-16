@@ -58,7 +58,7 @@ body {
 }
 
 .hero {
-  background-image: url(../img/bg/bg-utama.jpeg);
+  background-image: url(img/bg/bg-utama.jpeg);
   background-position: center top -40px;
   background-color: rgb(237, 240, 240);
   background-blend-mode: multiply;
