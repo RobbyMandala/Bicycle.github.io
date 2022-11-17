@@ -388,8 +388,9 @@ div.judul h1 {
   text-align: center;
   letter-spacing: 20px;
   text-shadow: 3px 3px 8px rgba(26, 26, 26, 0.6);
-  background-color: var(--bg-color-c);
+  /* background-color: var(--bg-color-c); */
   background-image: url(img/bg/bg-utama.jpeg);
+  /* background-attachment: fixed; */
 }
 
 div.card h2 {
