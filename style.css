@@ -41,7 +41,6 @@ body {
 }
 
 .nav-link {
-  /* color: var(--text-color); */
   font-weight: var(--font-medium);
 }
 
@@ -71,113 +70,12 @@ body {
 .container {
   display: flex;
   width: 100%;
-  /* margin-right: auto; */
-  /* margin-left: auto; */
+  margin-right: auto;
+  margin-left: auto;
   padding-right: 16px;
   padding-left: 16px;
   padding-top: var(--mb-4);
   padding-bottom: var(--mb-4);
-}
-
-.buttons {
-  display: flex;
-}
-
-.btn {
-  padding: 20px 40px;
-  text-align: center;
-  border-radius: 10%;
-  margin: 20px;
-  position: relative;
-}
-
-.box-01 {
-  background-color: yellow;
-  border-radius: 20px;
-  transition: transform 0.3s ease;
-}
-
-.box-01::after,
-.box-01::before {
-  content: "";
-  position: absolute;
-  opacity: 0.3;
-  background: #000;
-  border-radius: inherit;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  bottom: 0;
-  z-index: -1;
-  transition: transform 0.3s ease;
-}
-
-.box-01:hover {
-  transform: translate(-12px, -12px);
-}
-
-.box-01:hover::after {
-  transform: translate(6px, 6px);
-}
-
-.box-01:hover::before {
-  transform: translate(12px, 12px);
-}
-
-.box-02 {
-  border-radius: 20px;
-}
-
-.box-02::after,
-.box-02::before {
-  content: "";
-  border: 3px solid black;
-  position: absolute;
-  border-radius: inherit;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  bottom: 0;
-  z-index: -1;
-  transition: transform 0.3s ease;
-}
-
-.box-02:hover::after {
-  transform: translate(-5px, -5px);
-}
-
-.box-02:hover::before {
-  transform: translate(5px, 5px);
-}
-
-.box-03 {
-  overflow: hidden;
-  color: #fff;
-  border-radius: 30px;
-  box-shadow: 0 0 0 0 black, 0 0 0 0 black;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.box-03::after {
-  content: "";
-  width: 400px;
-  height: 400px;
-  position: absolute;
-  top: -50px;
-  left: -100px;
-  background-color: #ff3cac;
-  background-image: linear-gradient(255deg, #27d86c 0%, #26caf8 50%, #c625d0 100%);
-  z-index: -1;
-  transition: transform 0.5s ease;
-}
-
-.box-03:hover {
-  transform: translate(0, -6px);
-  box-shadow: 10px -10px 25px 0 rgba(143, 64, 248, 0.5), -10px 10px 25px 0 rgba(39, 200, 255, 0.5);
-}
-
-.box-03:hover::after {
-  transform: rotate(150deg);
 }
 
 section#contact div.container {
@@ -208,12 +106,8 @@ section#contact div.container {
 
 .content {
   color: black;
-  /* border: 1px solid black; */
-  /* text-align: center; */
-  /* width: 50%; */
   padding-left: 1rem;
   padding-right: 1rem;
-  /* margin-right: 10rem; */
   width: 100%;
 }
 
@@ -278,11 +172,7 @@ a {
   align-items: center;
   text-align: center;
   width: 60%;
-  /* margin: auto; */
-  /* justify-content: center; */
   gap: 100px;
-  /* position: relative; */
-  /* left: 100px; */
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
@@ -318,11 +208,9 @@ h1 {
 }
 
 .hamburger {
-  /* position: absolute; */
   display: none;
   top: 50%;
   left: 50%;
-  /* width: 80px; */
   cursor: pointer;
 }
 
@@ -333,8 +221,6 @@ h1 {
   margin: 5px auto;
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
   border-radius: 3px;
-  /* -webkit-transition: all 0.3s ease-in-out; */
-  /* transition: all 0.3s ease-in-out; */
   transition: all 0.3s;
   background-color: white;
   position: relative;
@@ -388,12 +274,10 @@ span + span {
   border: 1px solid white;
   padding: 4px;
   opacity: 0;
-  /* line-height: 10px; */
 }
 
 .overlay:target .close {
   animation: zoomDanFade 0.7s 0.5s forwards;
-  /* opacity: 1; */
 }
 
 /* Navigasi */
@@ -500,16 +384,12 @@ div.pasteBt {
 
 div.judul h1 {
   font-family: "Peralta", cursive;
-  font-size: 70px;
+  font-size: 80px;
   text-align: center;
   letter-spacing: 20px;
-  text-shadow: 3px 3px 7px rgba(26, 26, 26, 0.6);
+  text-shadow: 3px 3px 8px rgba(26, 26, 26, 0.6);
   background-color: var(--bg-color-c);
-  /* background-image: url(../img/bg/bg-utama.jpeg); */
-  /* background-attachment: fixed; */
-  /* -webkit-text-fill-color: transparent; */
-  /* background-clip: text; */
-  /* -webkit-background-clip: text; */
+  background-image: url(img/bg/bg-utama.jpeg);
 }
 
 div.card h2 {
@@ -788,6 +668,15 @@ footer P > a:hover {
     /* background-color: rgba(30, 48, 48, 0.6); */
   }
 
+  .container {
+    flex-direction: column;
+  }
+
+  .content2 {
+    width: 100%;
+    height: 100px;
+  }
+
   section#home {
     margin-top: 0;
     padding-top: 0;
@@ -822,24 +711,17 @@ footer P > a:hover {
     overflow-x: visible;
   }
 
-  section.jumbotron img {
-    width: 0;
-    height: 0;
-    padding: 0;
-    margin: 0;
-  }
-
   div.judul h1 {
     font-size: var(--mb-4);
   }
 }
 
-/* @media screen and (min-width: 960px) {
+@media screen and (min-width: 960px) {
   .bd-container {
     margin-left: auto;
     margin-right: auto;
   }
-} */
+}
 
 @media (max-width: 1024px) {
   .box {
