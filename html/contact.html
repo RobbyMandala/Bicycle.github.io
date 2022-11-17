@@ -14,15 +14,11 @@
     />
     <!-- BootStrap 5 -->
 
-    <!-- My CSS -->
-    <!-- <link rel="stylesheet" href="../css/contact.css" /> -->
-    <!-- My CSS -->
-
     <title>Contact</title>
   </head>
   <body>
     <!-- Contact -->
-    <form action="" method="" id="contact-form">
+    <form action="" method="post" id="contact-form">
       <section id="contact" class="mt-5">
         <div class="container">
           <div class="row text-center mb-3" data-aos="fade-down">
@@ -93,11 +89,13 @@
                   <label for="pesan" class="form-label">Pesan</label>
                   <textarea class="form-control" id="pesan" rows="3" name="pesan"></textarea>
                 </div>
-                <button type="button" id="submit" class="btn btn-primary btn-kirim" onclick="">
+                <!-- <button type="button" id="submit" class="btn btn-primary btn-kirim" onclick="">
                   Submit
+                </button> -->
+                <button class="btn btn-primary btn-kirim" onclick="whatsapp()">Submit</button>
+                <button type="button" name="submit" class="btn btn-primary btn-return" onclick="">
+                  Kembali
                 </button>
-                <button type="button" class="btn btn-primary btn-return" onclick="">Kembali</button>
-
                 <button class="btn btn-primary btn-loading d-none" type="button" disabled>
                   <span
                     class="spinner-border spinner-border-sm"
