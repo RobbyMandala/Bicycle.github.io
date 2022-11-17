@@ -13,7 +13,7 @@ contactForm.addEventListener("submit", function (e) {
   })
     .then(() => {
       // url thank you
-      window.location.href = "../html/index.html";
+      window.location.href = "../index.html";
     })
     .catch((e) => alert("Error Occured"));
 });
