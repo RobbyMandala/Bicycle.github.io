@@ -220,7 +220,7 @@ h1 {
 }
 
 .nav-link:hover {
-  /* color: rgb(100, 100, 210); */
+  color: rgb(100, 100, 210);
   color: white;
   background-color: rgb(100, 160, 236);
 }
