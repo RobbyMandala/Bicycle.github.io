@@ -273,6 +273,7 @@ span + span {
 .overlay:target {
   width: auto;
   height: auto;
+  left: 0;
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.7);
@@ -627,6 +628,16 @@ footer P > a:hover {
 }
 
 @media (max-width: 768px) {
+  .overlay:target .prev {
+    display: none;
+  }
+  .overlay:target .next {
+    display: none;
+  }
+  .overlay:target .close {
+    top: 180px;
+  }
+
   .hamburger {
     display: block;
   }
