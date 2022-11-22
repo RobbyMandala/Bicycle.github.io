@@ -96,7 +96,7 @@ section#contact div.container {
   position: relative;
   display: flex;
   width: 100%;
-  min-height: 70px;
+  min-height: 60px;
   background-color: black;
   z-index: 99999;
 }
@@ -155,9 +155,10 @@ a {
 }
 
 .navbar {
-  min-height: 70px;
+  min-height: 60px;
   width: 100%;
   display: flex;
+  padding: 0 16px;
   justify-content: space-around;
   align-items: center;
   background-color: var(--bg-color-c);
