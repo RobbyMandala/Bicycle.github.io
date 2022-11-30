@@ -4,20 +4,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- BootStrap 5 -->
+    <link rel="stylesheet" href="css/bootstrap-5.2.3-dist/css/bootstrap.min.css" />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
+      href="assets/fontawesome-free-6.2.1-web/fontawesome-free-6.2.1-web/css/fontawesome.min.css"
     />
-    <!-- BootStrap 5 -->
-
-    <!-- My CSS -->
     <link rel="stylesheet" href="style.css" />
-    <!-- My CSS -->
-
+    <link rel="stylesheet" href="assets/DataTabless/jquery.dataTables.min.css" />
+    <link rel="stylesheet" href="css/DataTables/datatables.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://kit.fontawesome.com/b13d5d8df8.js" crossorigin="anonymous"></script>
     <title>BICYCLE</title>
   </head>
   <body>
@@ -33,9 +36,14 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="#spd" class="nav-branding nav-link active"
+              <a href="#peminjaman" class="nav-branding nav-link active"
                 ><i class="fa-solid fa-bicycle fa-lg"> <span>PEMINJAMAN</span></i>
               </a>
+            </li>
+            <li>
+              <a href="#spd" class="nav-branding nav-link active"
+                ><i class="fa-solid fa-person-biking fa-lg"></i> <span>Bicycle</span></a
+              >
             </li>
           </ul>
           <div id="button" class="hamburger not-active">
@@ -73,15 +81,240 @@
         </div>
       </section>
 
-      <!-- <section id="peminjaman" class="peminjaman">
-        <div class="side">
+      <section id="peminjaman" class="peminjaman">
+        <div class="side" id="side-bar">
           <ul>
-            <li><a href="/">dashboard</a></li>
-            <li><a href="/">peminjaman</a></li>
+            <li><a id="dashboard">dashboard</a></li>
+            <li><a id="peminjaman-2">peminjaman</a></li>
           </ul>
         </div>
-        <h1 class="dashboard">dashboard</h1>
-      </section> -->
+        <div class="content-page">
+          <div class="content">
+            <div class="container">
+              <div id="content-top">
+                <div class="row">
+                  <div class="col">
+                    <h4 class="text">Selamat Datang</h4>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6 col-lg-3">
+                    <div class="mini-block bg-white">
+                      <span class="mini-stat-icon">
+                        <ion-icon name="accessibility-outline" class="ion"></ion-icon>
+                      </span>
+                      <div class="mini-info">
+                        <span>20</span>
+                        Total Siswa
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-3">
+                    <div class="mini-block bg-white">
+                      <span class="mini-stat-icon">
+                        <ion-icon name="book-outline"></ion-icon>
+                      </span>
+                      <div class="mini-info">
+                        <span>20</span>
+                        Total Sepeda
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-3">
+                    <div class="mini-block bg-white">
+                      <div class="mini-stat-icon">
+                        <ion-icon name="laptop-outline"></ion-icon>
+                      </div>
+                      <div class="mini-info">
+                        <span>20</span>
+                        Peminjaman
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-3">
+                    <div class="mini-block bg-white">
+                      <div class="mini-stat-icon">
+                        <ion-icon name="bookmarks-outline"></ion-icon>
+                      </div>
+                      <div class="mini-info">
+                        <span>20</span>
+                        Pengembalian
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title"><i class="fa fa-clock-o"></i>Data Siswa</h3>
+                </div>
+                <div class="panel-body">
+                  <div
+                    id="datatable_wrapper"
+                    class="dataTables_wrapper form-inline dt-bootstrap no-footer"
+                  >
+                    <!-- <div class="row">
+                      <div class="col-sm-6">
+                        <div class="dataTables_length" id="datatable_length">
+                          <label>
+                            Show
+                            <select
+                              name="datatable_length"
+                              aria-controls="datatable"
+                              class="form-control input-sm"
+                            >
+                              <option value="10">10</option>
+                              <option value="20">20</option>
+                              <option value="30">30</option>
+                            </select>
+                            entries
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div id="datatable_filter" class="dataTables_filter">
+                          <label
+                            >Search:
+                            <input
+                              type="search"
+                              class="form-control input-sm"
+                              placeholder="Search"
+                              aria-controls="datatable"
+                            />
+                          </label>
+                        </div>
+                      </div>
+                    </div> -->
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <table
+                          id="datatable"
+                          class="table table-hover dataTable no-footer display"
+                          role="grid"
+                          style="width: 100%"
+                        >
+                          <thead>
+                            <tr role="row">
+                              <th style="width: 66px">No.</th>
+                              <th style="width: 66px">NPM</th>
+                              <th style="width: 66px">Nama</th>
+                              <th style="width: 66px">Tgl Lahir</th>
+                              <th style="width: 66px">Kelas</th>
+                              <th style="width: 66px">Aksi</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr role="row" class="odd">
+                              <td style="width: 66px" class="sorting_1">1</td>
+                              <td style="width: 66px">2171020102</td>
+                              <td style="width: 66px">Robby Mandala</td>
+                              <td style="width: 66px">27 April 2003</td>
+                              <td style="width: 66px">3A</td>
+                              <td style="width: 66px"></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-6"></div>
+                      <div class="col-sm-6"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container-data" id="container-data">
+              <div class="cdata-top">
+                <div class="row">
+                  <div class="col">
+                    <h4 class="text">Data Peminjaman</h4>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-user"></i>Data Peminjaman</h3>
+                  </div>
+                  <div class="panel-body">
+                    <div
+                      id="datatable_wrapper"
+                      class="dataTables_wrapper form-inline dt-bootstrap no-footer"
+                    >
+                      <!-- <div class="row">
+                      <div class="col-sm-6">
+                        <div class="dataTables_length" id="datatable_length">
+                          <label>
+                            Show
+                            <select
+                              name="datatable_length"
+                              aria-controls="datatable"
+                              class="form-control input-sm"
+                            >
+                              <option value="10">10</option>
+                              <option value="20">20</option>
+                              <option value="30">30</option>
+                            </select>
+                            entries
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div id="datatable_filter" class="dataTables_filter">
+                          <label
+                            >Search:
+                            <input
+                              type="search"
+                              class="form-control input-sm"
+                              placeholder="Search"
+                              aria-controls="datatable"
+                            />
+                          </label>
+                        </div>
+                      </div>
+                    </div> -->
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <table
+                            id="datapeminjaman"
+                            class="table table-hover dataTable no-footer display"
+                            role="grid"
+                            style="width: 100%"
+                          >
+                            <thead>
+                              <tr role="row">
+                                <th style="width: 66px">No.</th>
+                                <th style="width: 66px">NPM</th>
+                                <th style="width: 66px">Nama</th>
+                                <th style="width: 66px">Tgl Lahir</th>
+                                <th style="width: 66px">Kelas</th>
+                                <th style="width: 66px">Aksi</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr role="row" class="odd">
+                                <td style="width: 66px" class="sorting_1">1</td>
+                                <td style="width: 66px">2171020102</td>
+                                <td style="width: 66px">Robby Mandala</td>
+                                <td style="width: 66px">27 April 2003</td>
+                                <td style="width: 66px">3A</td>
+                                <td style="width: 66px"></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6"></div>
+                        <div class="col-sm-6"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section id="spd">
         <div class="judul">
@@ -126,7 +359,7 @@
             <a href="#gambar-2">
               <img src="img/sepeda/sepeda-002.jpeg" alt="sepeda-002" class="gambar-02" />
             </a>
-            <h2>UN READY</h2>
+            <h2>READY</h2>
             <p id="teks">Waktu Anda</p>
             <a href="html/contact.html">
               <svg
@@ -225,9 +458,17 @@
     </footer>
     <!-- Akhir Footer -->
 
+    <script src="js/jquery-3.6.1.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/contodex.js"></script>
-    <!-- <script src="js/sc.js"></script> -->
-    <script src="https://kit.fontawesome.com/b13d5d8df8.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/b13d5d8df8.js" crossorigin="anonymous"></script> -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="assets/DataTabless/jquery.dataTables.min.js"></script>
+    <script src="assets/DataTabless/dataTables.bootstrap.js"></script>
+    <script src="css/DataTables/datatables.min.js"></script>
   </body>
 </html>

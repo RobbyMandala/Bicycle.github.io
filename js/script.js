@@ -1,3 +1,19 @@
+$(document).ready(function () {
+  $("#peminjaman-2").on("click", function () {
+    $("#container-data").show();
+    $("div.content-page div.content div.container").hide();
+  });
+  $("#dashboard").on("click", function () {
+    $("#container-data").hide();
+    $("div.content-page div.content div.container").show();
+  });
+});
+
+$(document).ready(function () {
+  $("#datatable").DataTable();
+  $("#datapeminjaman").DataTable();
+});
+
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 

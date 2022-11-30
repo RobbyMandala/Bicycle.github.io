@@ -1,7 +1,3 @@
-// const history = document.querySelector(".history");
-
-// const textNpm = document.createTextNode(npm);
-
 function clearForm() {
   const inputs = document.querySelectorAll(".livelong-satu input");
   inputs.forEach((input) => (input.value = ""));
