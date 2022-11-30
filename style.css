@@ -278,6 +278,15 @@ select.input-sm {
   border-radius: 3px;
 }
 
+div.dataTables_wrapper div.dataTables_length select {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.form-inline {
+  display: block;
+}
+
 @media (min-width: 768px) {
   .form-inline .form-control {
     display: inline-block;
